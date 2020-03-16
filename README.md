@@ -1,5 +1,5 @@
 ### spring-cloud-demo
-spring-cloud  Greenwich.SR3  
+spring-cloud  Hoxton.SR1  
 ##eureka 根据配置文件：
 application-single.yml 单机版本
 #高可用版本

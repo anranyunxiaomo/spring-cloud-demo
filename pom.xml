@@ -3,31 +3,40 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+
     <groupId>com.moxuan.spring-cloud-demo</groupId>
     <artifactId>spring-cloud-demo</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0</version>
-    <modules>
-        <module>eurekaserver</module>
-        <module>eurekaclient</module>
-    </modules>
     <name>spring-cloud-demo</name>
     <description>springCloud组建搭建</description>
 
+    <modules>
+        <module>eureka-server</module>
+        <module>eureka-client</module>
+        <module>cloud-provider-payment-8001</module>
+    </modules>
+    <!--统一管理jar-->
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <junit.version>4.12</junit.version>
+        <log4j.version>1.2.17</log4j.version>
+        <lomok.version>1.16.18</lomok.version>
         <java.version>1.8</java.version>
         <guava.version>22.0</guava.version>
         <hutool.version>5.1.0</hutool.version>
+        <druid.version>1.1.16</druid.version>
+        <mysql.version>6.0.6</mysql.version>
         <mybatis-plus.version>3.3.0</mybatis-plus.version>
-        <spring-boot.version>2.1.9.RELEASE</spring-boot.version>
-        <spring-cloud.version>Greenwich.SR3</spring-cloud.version>
+        <spring-boot.version>2.2.2.RELEASE</spring-boot.version>
+        <spring-cloud.version>Hoxton.SR1</spring-cloud.version>
     </properties>
 
+    <!--子类模块继承后,不需要在写 groupId 和version-->
+    <!--父pom 总包管理 --> <!-- 声明依赖,并不实现引入,因此字项目需要显示声明需要用的依赖 -->
     <dependencyManagement>
         <dependencies>
-
             <!--SpringBoot版本-->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
@@ -47,6 +56,7 @@
             <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
+                <version>${lomok.version}</version>
             </dependency>
 
             <dependency>
@@ -59,35 +69,25 @@
                 <artifactId>hutool-all</artifactId>
                 <version>${hutool.version}</version>
             </dependency>
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.version}</version>
+            </dependency>
+            <!--<dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid</artifactId>
+                <version>${druid.version}</version>
+            </dependency>-->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
-    <repositories>
-        <repository>
-            <id>spring-snapshots</id>
-            <name>Spring Snapshots</name>
-            <url>https://repo.spring.io/snapshot</url>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
-        <repository>
-            <id>spring-milestones</id>
-            <name>Spring Milestones</name>
-            <url>https://repo.spring.io/milestone</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-        <repository>
-            <id>spring-releases</id>
-            <name>Spring Releases</name>
-            <url>https://repo.spring.io/release</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-    </repositories>
+
     <pluginRepositories>
         <pluginRepository>
             <id>spring-snapshots</id>
