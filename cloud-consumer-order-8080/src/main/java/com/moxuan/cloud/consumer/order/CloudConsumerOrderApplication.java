@@ -1,4 +1,4 @@
-package com.moxuan.cloud.provider.payment;
+package com.moxuan.cloud.consumer.order;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,9 +8,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author xuan
  */
 @SpringBootApplication
-public class CloudProviderPaymentApplication {
+public class CloudConsumerOrderApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(CloudProviderPaymentApplication.class, args);
+        SpringApplication.run(CloudConsumerOrderApplication.class, args);
     }
 }

@@ -2,10 +2,9 @@ package com.moxuan.cloud.provider.payment.service.impl;
 
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.moxuan.cloud.provider.payment.mapper.PaymentMapper;
-import com.moxuan.cloud.provider.payment.module.PaymentAddDTO;
-import com.moxuan.cloud.provider.payment.module.entity.Payment;
-import com.moxuan.cloud.provider.payment.module.result.CommonResult;
+
 import com.moxuan.cloud.provider.payment.service.PaymentService;
+import com.moxuan.common.result.CommonResult;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -28,7 +27,7 @@ public class PaymentServiceImpl implements PaymentService {
      * @Author       zhangkai
      * @Description  添加
      * @param        paymentAddDTO
-     * @Return       com.moxuan.cloud.provider.payment.module.result.CommonResult
+     * @Return       com.moxuan.common.module.result.CommonResult
      * @Exception
      * @Date         2020/3/16 10:29 下午
      */
@@ -44,7 +43,7 @@ public class PaymentServiceImpl implements PaymentService {
      * @Author       zhangkai
      * @Description  查询
      * @param        id
-     * @Return       com.moxuan.cloud.provider.payment.module.result.CommonResult
+     * @Return       com.moxuan.common.module.result.CommonResult
      * @Exception
      * @Date         2020/3/16 10:37 下午
      */

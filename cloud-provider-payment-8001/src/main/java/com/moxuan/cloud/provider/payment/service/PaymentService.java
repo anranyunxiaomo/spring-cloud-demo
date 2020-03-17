@@ -1,7 +1,7 @@
 package com.moxuan.cloud.provider.payment.service;
 
-import com.moxuan.cloud.provider.payment.module.PaymentAddDTO;
-import com.moxuan.cloud.provider.payment.module.result.CommonResult;
+import com.moxuan.common.entity.PaymentAddDTO;
+import com.moxuan.common.result.CommonResult;
 
 /**
  * @ProjectName dxyt-mdm
@@ -17,7 +17,7 @@ public interface PaymentService {
      * @Author       zhangkai
      * @Description  添加
      * @param        paymentAddDTO
-     * @Return       com.moxuan.cloud.provider.payment.module.result.CommonResult
+     * @Return       com.moxuan.common.module.result.CommonResult
      * @Exception
      * @Date         2020/3/16 10:29 下午
      */
@@ -28,7 +28,7 @@ public interface PaymentService {
      * @Author       zhangkai
      * @Description  查询
      * @param        id
-     * @Return       com.moxuan.cloud.provider.payment.module.result.CommonResult
+     * @Return       com.moxuan.common.module.result.CommonResult
      * @Exception
      * @Date         2020/3/16 10:37 下午
      */

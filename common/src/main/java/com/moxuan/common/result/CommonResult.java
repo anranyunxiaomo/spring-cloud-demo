@@ -1,4 +1,4 @@
-package com.moxuan.cloud.provider.payment.module.result;
+package com.moxuan.common.result;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

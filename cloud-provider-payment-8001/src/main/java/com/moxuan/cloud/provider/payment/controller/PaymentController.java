@@ -1,8 +1,8 @@
 package com.moxuan.cloud.provider.payment.controller;
 
-import com.moxuan.cloud.provider.payment.module.PaymentAddDTO;
-import com.moxuan.cloud.provider.payment.module.result.CommonResult;
 import com.moxuan.cloud.provider.payment.service.PaymentService;
+import com.moxuan.common.entity.PaymentAddDTO;
+import com.moxuan.common.result.CommonResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -25,7 +25,7 @@ public class PaymentController {
      * @Author       zhangkai
      * @Description  添加
      * @param        paymentAddDTO
-     * @Return       com.moxuan.cloud.provider.payment.module.result.CommonResult
+     * @Return       com.moxuan.common.module.result.CommonResult
      * @Exception
      * @Date         2020/3/16 10:29 下午
      */
@@ -39,7 +39,7 @@ public class PaymentController {
      * @Author       zhangkai
      * @Description  查询
      * @param        id
-     * @Return       com.moxuan.cloud.provider.payment.module.result.CommonResult
+     * @Return       com.moxuan.common.module.result.CommonResult
      * @Exception
      * @Date         2020/3/16 10:37 下午
      */

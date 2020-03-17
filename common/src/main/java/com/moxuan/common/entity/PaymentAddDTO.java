@@ -1,4 +1,4 @@
-package com.moxuan.cloud.provider.payment.module;
+package com.moxuan.common.entity;
 
 import lombok.Data;
 
