@@ -1,6 +1,5 @@
 package com.moxuan.cloud.provider.payment.controller;
 
-import com.baomidou.mybatisplus.core.toolkit.ObjectUtils;
 import com.moxuan.cloud.provider.payment.service.PaymentService;
 import com.moxuan.common.entity.PaymentAddDTO;
 import com.moxuan.common.result.CommonResult;
@@ -26,6 +25,7 @@ public class PaymentController {
 
     @Autowired
     private PaymentService paymentService;
+
     @Value("${server.port}")
     private String serverPort;
 
@@ -56,7 +56,6 @@ public class PaymentController {
      */
     @GetMapping("/select/{id}")
     public CommonResult select( @PathVariable(name = "id") Long id){
-        System.out.println(serverPort);
         return paymentService.select(id);
     }
 
@@ -69,4 +68,5 @@ public class PaymentController {
         System.out.println(serviceInstanceList.toString());
         return discoveryClient;
     }
+
 }

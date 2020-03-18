@@ -20,7 +20,7 @@ import org.springframework.web.client.RestTemplate;
 @RequestMapping("/order")
 public class OrderController {
 
-    public static final String PAYMENT_ADD_POST="http://localhost:8081";
+    public static final String PAYMENT_ADD_POST="http://CLOUD-PAYMENT-SERVICE";
     @Autowired
     private RestTemplate restTemplate;
 

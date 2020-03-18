@@ -1,4 +1,4 @@
-package com.moxuan.cloud.provider.payment.module.entity;
+package com.moxuan.common.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;

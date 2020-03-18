@@ -1,5 +1,5 @@
 server:
-  port: 8081
+  port: 8082
 
 spring:
   application:
@@ -28,11 +28,5 @@ eureka:
       defaultZone: http://eureka1.com:7001/eureka,http://eureka2.com:7002/eureka
   # 配置eureka 页面查看 ip(主机名修改) 重命名
   instance:
-    instance-id: payment8001
     # 访问路径可以显示ip 地址
-    prefer-ip-address: true
-
-    # 客户端向服务发送心跳时间间隔  默认 30秒
-    lease-renewal-interval-in-seconds: 1
-    # 服务端在收到最后一次心跳后 等待的时间上线   超时删除
-    lease-expiration-duration-in-seconds: 2
+    instance-id: payment8002
