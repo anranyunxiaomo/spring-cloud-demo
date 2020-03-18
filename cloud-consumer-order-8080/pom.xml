@@ -19,7 +19,19 @@
             <groupId>com.moxuan.spring-cloud-demo</groupId>
             <artifactId>common</artifactId>
             <version>${project.version}</version>
+            <!--排除公共模块中 本模块不需要的依赖-->
+            <exclusions>
+                <exclusion>
+                    <groupId>mysql</groupId>
+                    <artifactId>mysql-connector-java</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.baomidou</groupId>
+                    <artifactId>mybatis-plus-boot-starter</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
+
     </dependencies>
 
     <build>
