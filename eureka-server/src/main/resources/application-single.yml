@@ -1,10 +1,11 @@
 server:
-  port: 9090
+  port: 7001
   # 因为当前 eureka 是单机版本，所以我们需要做一些配置
 eureka:
   instance:
     hostname: 127.0.0.1
   client:
+    # 不去注册自己
     register-with-eureka: false
     fetch-registry: false
     service-url:

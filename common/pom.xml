@@ -13,7 +13,6 @@
     <artifactId>common</artifactId>
     <description>common 公共模块</description>
 
-
     <dependencies>
     <dependency>
         <groupId>org.springframework.boot</groupId>
@@ -35,6 +34,17 @@
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
         </dependency>
+        <!--eurekaServer 依赖 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+        </dependency>
+        <!--eurekaClient 依赖 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+
     </dependencies>
 
 </project>

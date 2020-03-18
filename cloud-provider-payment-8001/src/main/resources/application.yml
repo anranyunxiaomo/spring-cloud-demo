@@ -18,3 +18,11 @@ spring:
       maximum-pool-size: 15
       minimum-idle: 10
       pool-name: DemoHikariCP
+
+eureka:
+  client:
+    # 注册
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka1.com:7001/eureka,http://eureka2.com:7002/eureka

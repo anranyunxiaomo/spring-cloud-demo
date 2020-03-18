@@ -1,7 +1,6 @@
 spring:
   profiles:
-    active: server-tow
-#server-tow
+    active: server-two
 
 
 
