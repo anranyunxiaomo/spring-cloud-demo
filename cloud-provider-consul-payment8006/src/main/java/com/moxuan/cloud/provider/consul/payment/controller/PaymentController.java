@@ -1,4 +1,4 @@
-package com.moxuan.cloud.provider.cousul.payment.controller;
+package com.moxuan.cloud.provider.consul.payment.controller;
 
 import com.moxuan.common.result.CommonResult;
 import org.springframework.beans.factory.annotation.Value;

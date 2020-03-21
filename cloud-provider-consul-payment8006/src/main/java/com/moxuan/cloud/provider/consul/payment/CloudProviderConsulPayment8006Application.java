@@ -1,4 +1,4 @@
-package com.moxuan.cloud.provider.cousul.payment;
+package com.moxuan.cloud.provider.consul.payment;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

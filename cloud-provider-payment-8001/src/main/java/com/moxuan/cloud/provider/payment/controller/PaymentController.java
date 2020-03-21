@@ -69,4 +69,9 @@ public class PaymentController {
         System.out.println(serviceInstanceList.toString());
         return discoveryClient;
     }
+
+    @GetMapping(value = "/payment/lb")
+    public String getPaymentLB(){
+        return serverPort;
+    }
 }
