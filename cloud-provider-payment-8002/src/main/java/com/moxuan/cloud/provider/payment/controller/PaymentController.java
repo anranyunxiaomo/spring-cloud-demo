@@ -56,6 +56,7 @@ public class PaymentController {
      */
     @GetMapping("/select/{id}")
     public CommonResult select( @PathVariable(name = "id") Long id){
+        System.out.println(serverPort);
         return paymentService.select(id);
     }
 

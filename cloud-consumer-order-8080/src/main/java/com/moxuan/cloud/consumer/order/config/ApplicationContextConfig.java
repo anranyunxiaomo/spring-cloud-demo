@@ -5,6 +5,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestTemplate;
 
+import java.lang.annotation.Target;
+
 /**
  * @ProjectName dxyt-mdm
  * @ClassName ApplicationContextConfig
@@ -16,7 +18,7 @@ import org.springframework.web.client.RestTemplate;
 public class ApplicationContextConfig {
 
     @Bean
-    @LoadBalanced  //轮询 负载均衡
+    @LoadBalanced()  //轮询 负载均衡
     public RestTemplate getRestTemplate(){
         return new RestTemplate();
     }
