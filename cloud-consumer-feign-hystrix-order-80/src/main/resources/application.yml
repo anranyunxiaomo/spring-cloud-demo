@@ -1,0 +1,18 @@
+server:
+  port: 80
+
+spring:
+  application:
+    name: cloud-consumer-feign-hystrix-order
+
+eureka:
+  client:
+    # 注册
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka1.com:7001/eureka
+
+ribbon:
+  ReadTimeout: 4000
+  ConnectTimeout: 4000

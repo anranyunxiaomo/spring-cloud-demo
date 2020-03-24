@@ -23,6 +23,8 @@
         <module>cloud-provider-consul-payment8006</module>
         <module>cloud-consul-order-80</module>
         <module>cloud-consumer-feign-order-80</module>
+        <module>cloud-provider-hystrix-payment-8001</module>
+        <module>cloud-consumer-feign-hystrix-order-80</module>
     </modules>
     <!--统一管理jar-->
     <properties>
@@ -81,11 +83,6 @@
                 <artifactId>mysql-connector-java</artifactId>
                 <version>${mysql.version}</version>
             </dependency>
-            <!--<dependency>
-                <groupId>com.alibaba</groupId>
-                <artifactId>druid</artifactId>
-                <version>${druid.version}</version>
-            </dependency>-->
             <dependency>
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-boot-starter</artifactId>
