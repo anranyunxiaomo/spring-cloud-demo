@@ -13,6 +13,10 @@ eureka:
     service-url:
       defaultZone: http://eureka1.com:7001/eureka
 
-ribbon:
-  ReadTimeout: 4000
-  ConnectTimeout: 4000
+#ribbon:
+#  ReadTimeout: 4000
+#  ConnectTimeout: 4000
+# feign 里面 开启 hystrix
+feign:
+  hystrix:
+    enabled: true

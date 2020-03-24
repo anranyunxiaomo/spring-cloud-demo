@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.PathVariable;
  * @Date 2020/3/23 9:57 下午
  */
 @Component
-@FeignClient(value = "cloud-provider-hystrix-payment")
+@FeignClient(value = "CLOUD-PROVIDER-HYSTRIX-PAYMENT",fallback = PaymentService.class)
 public interface OrderService {
     @GetMapping("/payment/hystrix/ok/{id}")
     public String paymentInfoOk(@PathVariable("id") Integer id);
@@ -21,4 +21,7 @@ public interface OrderService {
     //    payment_info_error
     @GetMapping("/payment/hystrix/error/{id}")
     public String paymentInfoError(@PathVariable("id") Integer id);
+
+    @GetMapping("/payment/paymentCircuitBreaker/{id}")
+    public String paymentCircuitBreaker(@PathVariable("id")Integer id);
 }

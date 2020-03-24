@@ -33,4 +33,8 @@ public class PaymentController {
     public String paymentInfoError(@PathVariable("id")Integer id){
         return paymentService.payment_info_error(id);
     }
+    @GetMapping("/paymentCircuitBreaker/{id}")
+    public String paymentCircuitBreaker(@PathVariable("id")Integer id){
+        return paymentService.paymentCircuitBreaker(id);
+    }
 }
