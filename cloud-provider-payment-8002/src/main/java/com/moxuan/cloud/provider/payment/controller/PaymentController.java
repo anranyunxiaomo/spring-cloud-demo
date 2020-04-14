@@ -74,4 +74,15 @@ public class PaymentController {
     public String getPaymentLB(){
         return serverPort;
     }
+
+    @GetMapping("/get")
+    public String payment(){
+//        try {
+//            TimeUnit.SECONDS.sleep(3);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
+        return serverPort;
+    }
+
 }

@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.core.toolkit.ObjectUtils;
 import com.moxuan.cloud.provider.payment.service.PaymentService;
 import com.moxuan.common.entity.PaymentAddDTO;
 import com.moxuan.common.result.CommonResult;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.ServiceInstance;
@@ -21,6 +22,7 @@ import java.util.concurrent.TimeUnit;
  * @Description
  * @Date 2020/3/16 10:13 下午
  */
+@Slf4j
 @RestController
 @RequestMapping("/payment")
 public class PaymentController {
@@ -71,8 +73,9 @@ public class PaymentController {
         return discoveryClient;
     }
 
-    @GetMapping(value = "/payment/lb")
-    public String getPaymentLB(){
+    @GetMapping(value = "/payment/lb/{id}")
+    public String getPaymentLB(@PathVariable(name = "id") Long id){
+        log.info("get"+id);
         return serverPort;
     }
 

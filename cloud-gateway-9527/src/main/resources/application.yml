@@ -1,0 +1,36 @@
+server:
+  port: 9527
+spring:
+  application:
+    name: cloud-gateway
+
+# 配置信息的方式
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true #开启动态路由转发
+      routes:
+        - id: payment_routh
+          #uri: http://127.0.0.1:8001
+          uri: lb://cloud-payment-service
+          predicates:
+            - Path=/payment/get/**
+          # - Header=X-Request-Id, \d+   #请求头要有 X-request-Id 属性并且值为整数的正则表达式。 curl http://localhost:9527/payment/get -H "X-Request-Id:12233"
+            #- Cookie=moxuan,zk  cookie  curl http://localhost:9527/payment/get --cookie "moxuan=zk"
+
+
+        - id: payment_routh2
+          #uri: http://127.0.0.1:8001
+          uri: lb://cloud-payment-service
+          predicates:
+            - Path=/payment/payment/lb/**
+           #- After=2020-04-14T18:15:17.036+08:00[Asia/Shanghai]  时间以后 规则 断言
+           #- Cookie=moxuan,zk  cookie
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka1.com:7001/eureka
