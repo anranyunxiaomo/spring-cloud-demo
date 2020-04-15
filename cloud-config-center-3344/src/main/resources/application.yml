@@ -1,0 +1,31 @@
+server:
+  port: 3344
+
+spring:
+# 修改配置文件 乱码问题。
+  http:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+ ####################
+  application:
+    name: cloud-config-center
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/anranyunxiaomo/springcloud-config.git
+          search-paths:
+            - springcloud-config
+          username: 120796154@qq.com
+          password: zhangKAI0205
+      # 读取分支
+      label: master
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka1.com:7001/eureka

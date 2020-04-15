@@ -1,0 +1,32 @@
+server:
+  port: 3355
+
+spring:
+  application:
+    name: config-client
+
+  cloud:
+    config:
+      label: master
+      name: config
+      profile: dev
+      uri: http://config-3344.com:3344/
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka1.com:7001/eureka
+# 暴露监控端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+# http://127.0.0.1:3355/actuator/refresh  需要post 请求 进行刷新
+  #       [
+          #    "config.client.version",
+        #      "config.info"
+        #]
