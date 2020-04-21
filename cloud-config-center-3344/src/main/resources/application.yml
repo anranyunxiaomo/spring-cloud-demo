@@ -22,6 +22,11 @@ spring:
           password: zhangKAI0205
       # 读取分支
       label: master
+rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
 
 eureka:
   client:
@@ -29,3 +34,13 @@ eureka:
     fetch-registry: true
     service-url:
       defaultZone: http://eureka1.com:7001/eureka
+
+# rabbitmq 相关配置 暴露bus 刷新配置的端点
+management:
+  endpoints: # 暴露bus 刷新配置的端点
+    web:
+      exposure:
+        include: 'bus-refresh'
+      # http://localhost:3344/actuator/bus-refresh  广播通知 刷新接口
+      # http://localhost:3344/actuator/bus-refresh/${application.name}:${server.port}
+      # 指定配置服务 生效 配置文件。

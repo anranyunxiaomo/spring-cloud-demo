@@ -1,6 +1,5 @@
 server:
-  port: 3355
-
+  port: 3366
 spring:
   application:
     name: config-client
@@ -23,16 +22,10 @@ eureka:
     fetch-registry: true
     service-url:
       defaultZone: http://eureka1.com:7001/eureka
+
 # 暴露监控端点
 management:
   endpoints:
     web:
       exposure:
         include: "*"
-
-
-    # http://127.0.0.1:3355/actuator/refresh  需要post 请求 进行刷新
-    #       [
-    #    "config.client.version",
-    #      "config.info"
-  #]
