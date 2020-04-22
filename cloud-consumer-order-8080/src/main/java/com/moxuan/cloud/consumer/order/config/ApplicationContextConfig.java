@@ -18,7 +18,7 @@ import java.lang.annotation.Target;
 public class ApplicationContextConfig {
 
     @Bean
-   // @LoadBalanced()  //轮询 负载均衡
+   @LoadBalanced()  //轮询 负载均衡
     public RestTemplate getRestTemplate(){
         return new RestTemplate();
         //轮询(算法计算) 负载均衡
