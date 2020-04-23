@@ -1,0 +1,15 @@
+server:
+  port: 9001
+spring:
+  application:
+    name: cloud-alibaba-nacos-provider-payment
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+# 将监控的信息 全部暴露
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

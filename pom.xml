@@ -33,6 +33,10 @@
         <module>cloud-stream-rabbitmq-provider-8801</module>
         <module>cloud-stream-rabbitmq-consumer-8802</module>
         <module>cloud-stream-rabbitmq-consumer-8803</module>
+        <module>cloud-alibaba-provider-payment-9001</module>
+        <module>cloud-alibaba-provider-payment-9002</module>
+        <module>cloud-alibaba-consumer-nacos-order-83</module>
+        <module>cloud-alibaba-config-nacos-client-3377</module>
     </modules>
     <!--统一管理jar-->
     <properties>
@@ -48,6 +52,7 @@
         <mybatis-plus.version>3.3.0</mybatis-plus.version>
         <spring-boot.version>2.2.2.RELEASE</spring-boot.version>
         <spring-cloud.version>Hoxton.SR1</spring-cloud.version>
+        <spring-cloud-alibaba.version>2.1.0.RELEASE</spring-cloud-alibaba.version>
     </properties>
 
     <!--子类模块继承后,不需要在写 groupId 和version-->
@@ -62,7 +67,13 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${spring-cloud-alibaba.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
