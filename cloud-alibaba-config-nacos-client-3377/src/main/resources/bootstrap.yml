@@ -10,6 +10,10 @@ spring:
       config:
         server-addr: 127.0.0.1:8848
         file-extension: yaml
+        group: DEV_GROUP
+        namespace: 3e9a966a-def1-483e-94f7-3827a7d36f53
+# ${spring.application.name}-${spring.profile.active}.${spring.cloud.nacos.config.file.extension} nacos-config-client-dev.yml
+
 
 management:
   endpoints:
