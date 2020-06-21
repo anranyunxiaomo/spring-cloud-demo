@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>cloud-alibaba-consumer-nacos-order-84</artifactId>
+    <artifactId>cloud-alibaba-consumer-nacos-order-feign-84</artifactId>
     <dependencies>
         <dependency>
             <groupId>com.moxuan.spring-cloud-demo</groupId>
@@ -37,6 +37,10 @@
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
     </dependencies>
 
